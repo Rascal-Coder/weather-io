@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script type="module" src="./assets/js/route.js"></script>
+    <script type="module" src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="log">
+          <img
+            src="./assets/images/logo.png"
+            alt="logo"
+            width="364"
+            height="58"
+          />
+        </a>
+        <div class="search-view" data-search-view>
+          <div class="search-wrapper searching">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search for a city"
+              autocomplete="off"
+              class="search-field"
+              data-search-field
+            />
+            <span class="m-icon">search</span>
+          </div>
+          <button
+            class="icon-btn leading-icon has-state"
+            aria-label="close search"
+            data-search-toggler
+          >
+            <span class="m-icon">arrow_back</span>
+          </button>
+        </div>
+        <div class="search-result" data-search-result>
+          <ul class="view-list" data-search-list>
+            <li class="view-item">
+              <span class="m-icon">location_on</span>
+              <div>
+                <div class="item-title">London</div>
+              </div>
+              <a href="" class="item-link has-state" data-search-toggler></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="header-actions">
+          <button
+            class="icon-btn has-state"
+            aria-label="open search"
+            data-search-toggler
+          >
+            <span class="m-icon icon">search</span>
+          </button>
+          <a
+            href="#/current-location"
+            class="btn-primary has-state"
+            data-current-location-btn
+          >
+            <span class="m-icon">my_location</span>
+            <span class="span">Current location</span>
+          </a>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

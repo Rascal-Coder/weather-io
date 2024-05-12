@@ -17,7 +17,7 @@
   <body>
     <header class="header">
       <div class="container">
-        <a href="#" class="log">
+        <a href="#/weather?lat=30.6598628&lon=104.0633717" class="logo">
           <img
             src="./assets/images/logo.png"
             alt="logo"
@@ -35,7 +35,7 @@
               class="search-field"
               data-search-field
             />
-            <span class="m-icon">search</span>
+            <span class="m-icon leading-icon">search</span>
             <button
               class="icon-btn leading-icon has-state"
               aria-label="close search"
@@ -47,14 +47,14 @@
 
           <div class="search-result" data-search-result>
             <ul class="view-list" data-search-list>
-              <li class="view-item">
+              <!-- <li class="view-item">
                 <span class="m-icon">location_on</span>
                 <div>
                   <p class="item-title">London</p>
                   <p class="label-2 item-subtitle">State of London, GB</p>
                 </div>
                 <a href="#" class="item-link has-state" data-search-toggler></a>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
@@ -79,15 +79,15 @@
       </div>
     </header>
     <main>
-      <article class="container">
+      <article class="container" data-container>
         <!--  #CURRENT WEATHER -->
         <div class="content-left">
           <section
             class="section current-weather"
             aria-label="current weather"
-            dtaa-current-weather
+            data-current-weather
           >
-            <div
+            <!-- <div
               class="card card-lg current-weather-card"
               aria-label="current weather"
               data-current-weather
@@ -115,7 +115,7 @@
                   <p class="title-3 meta-text">London, GB</p>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </section>
           <!--  #FORECAST -->
           <section
@@ -123,7 +123,7 @@
             aria-labelledby="forecast-label"
             data-5-day-forecast
           >
-            <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
+            <!-- <h2 class="title-2" id="forecast-label">5 Days Forecast</h2>
             <div class="card card-lg forecast-card">
               <ul>
                 <li class="card-item">
@@ -207,7 +207,7 @@
                   <p class="label-1">Friday</p>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </section>
         </div>
         <div class="content-right">
@@ -216,7 +216,7 @@
             aria-labelledby="highlights-label"
             data-highlights
           >
-            <div class="card card-lg">
+            <!-- <div class="card card-lg">
               <h2 class="title-2" id="highlights-label">Todays Highlights</h2>
               <div class="highlight-list">
                 <div class="card card-sm highlight-card one">
@@ -291,7 +291,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </section>
 
           <section
@@ -299,7 +299,7 @@
             aria-label="hourly forecast"
             data-hourly-forecast
           >
-            <h2 class="title-2">Today at</h2>
+            <!-- <h2 class="title-2">Today at</h2>
             <div class="slider-container">
               <ul class="slider-list" data-temp>
                 <li class="slider-item">
@@ -486,7 +486,7 @@
                   </div>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </section>
           <!-- FOOTER -->
           <footer class="footer">
@@ -523,7 +523,7 @@
       <p class="body-1">
         Page not found!
       </p>
-      <a href="#" class="btn-primary">
+      <a href="#/weather?lat=30.6598628&lon=104.0633717" class="btn-primary">
         <span class="span">Go Home</span>
       </a>
     </section>

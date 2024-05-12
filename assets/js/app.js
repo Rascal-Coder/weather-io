@@ -311,7 +311,6 @@ export const updateWeather = (lat, lon) => {
                     title="wind direction"
                     />
                     <p class="body-3">${parseInt(module.mps_to_kmh(windSpeed))} km/h</p>
-                    >
                 </div>    
                 `
                 hourlySection.querySelector("[data-wind]").appendChild(windLi)

@@ -1,10 +1,3 @@
-/**
- * @license MIT
- * @fileoverview All module functions
- * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
- */
-
 'use strict';
 
 // export const weekDayNames = [
@@ -90,7 +83,6 @@ export const getDate = function (dateUnix, timezone) {
  */
 export const getTime = function (timeUnix, timezone) {
     const date = new Date((timeUnix + timezone) * 1000);
-    console.log("🚀 ~ getTime ~ timeUnix:", timeUnix)
     let hours = date.getUTCHours();
     const minutes = date.getUTCMinutes();
     const period = hours >= 12 ? "PM" : "AM";
@@ -106,13 +98,6 @@ export const getTime = function (timeUnix, timezone) {
  * @param {number} timezone Timezone shift from UTC in seconds 
  * @returns {string} Time string. format: "HH AM/PM"
  */
-// export const getHours = function (timeUnix, timezone) {
-//     const date = new Date((timeUnix + timezone) * 1000);
-//     let hours = date.getUTCHours();
-//     const period = hours >= 12 ? "PM" : "AM";
-//     // hours = hours % 12 || 12;
-//     return `${hours} ${period}`;
-// } 
 export const getHours = function (timeUnix, timezone) {
     // 将 Unix 时间戳转换为 Date 对象
     const date = new Date(timeUnix);

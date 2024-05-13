@@ -1,5 +1,5 @@
 'use strict'
-const api_key = '612fe0c2c22681284f5bdf0b1f77bd17'
+const Weather_Key = '612fe0c2c22681284f5bdf0b1f77bd17'
 const BAIDU_KEY = '26711937b3cbee60212cdf3af91b0ed8'
 export const fetchData = (URL, callback) => {
     fetch(`${URL}`)
@@ -8,13 +8,13 @@ export const fetchData = (URL, callback) => {
 }
 export const url = {
     currentWeather(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric&lang=zh_cn&appid=${api_key}`
+        return `https://api.openweathermap.org/data/2.5/weather?${lat}&${lon}&units=metric&lang=zh_cn&appid=${Weather_Key}`
     },
     forecast(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric&lang=zh_cn&appid=${api_key}`
+        return `https://api.openweathermap.org/data/2.5/forecast?${lat}&${lon}&units=metric&lang=zh_cn&appid=${Weather_Key}`
     },
     airPollution(lat, lon) {
-        return `https://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}&appid=${api_key}`
+        return `https://api.openweathermap.org/data/2.5/air_pollution?${lat}&${lon}&appid=${Weather_Key}`
     },
     reverseGeo(lat, lon) {
         return `https://restapi.amap.com/v3/geocode/regeo?output=json&location=${lon},${lat}&key=${BAIDU_KEY}`

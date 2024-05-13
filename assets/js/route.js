@@ -11,10 +11,10 @@ import { updateWeather, error404 } from "./app.js";
 const defaultLocation = "#/weather?lat=30.6598628&lon=104.0633717"; //Chengdu
 const currentLocation = function () {
   if (localStorage.getItem("iframeQuery")) {
-    const { latitude, longitude } = JSON.parse(
+    const { lat, lon } = JSON.parse(
       localStorage.getItem("iframeQuery")
     );
-    updateWeather(`lat=${latitude}`, `lon=${longitude}`);
+    updateWeather(`lat=${lat}`, `lon=${lon}`);
   } else {
     window.navigator.geolocation.getCurrentPosition(
       (res) => {

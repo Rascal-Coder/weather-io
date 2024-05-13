@@ -110,7 +110,7 @@ export const updateWeather = (lat, lon) => {
   highlightSection.innerHTML = "";
   hourlySection.innerHTML = "";
   forecastSection.innerHTML = "";
-  if (window.location.hash === "#/current-location") {
+  if (window.location.hash === "#/current-location" || localStorage.getItem('iframeQuery')) {
     currentLocationBtn.setAttribute("disabled", "");
   } else {
     currentLocationBtn.removeAttribute("disabled");

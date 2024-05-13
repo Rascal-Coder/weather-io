@@ -90,6 +90,7 @@ export const getDate = function (dateUnix, timezone) {
  */
 export const getTime = function (timeUnix, timezone) {
     const date = new Date((timeUnix + timezone) * 1000);
+    console.log("🚀 ~ getTime ~ timeUnix:", timeUnix)
     let hours = date.getUTCHours();
     const minutes = date.getUTCMinutes();
     const period = hours >= 12 ? "PM" : "AM";
@@ -105,14 +106,22 @@ export const getTime = function (timeUnix, timezone) {
  * @param {number} timezone Timezone shift from UTC in seconds 
  * @returns {string} Time string. format: "HH AM/PM"
  */
+// export const getHours = function (timeUnix, timezone) {
+//     const date = new Date((timeUnix + timezone) * 1000);
+//     let hours = date.getUTCHours();
+//     const period = hours >= 12 ? "PM" : "AM";
+//     // hours = hours % 12 || 12;
+//     return `${hours} ${period}`;
+// } 
 export const getHours = function (timeUnix, timezone) {
-    const date = new Date((timeUnix + timezone) * 1000);
-    let hours = date.getUTCHours();
+    // 将 Unix 时间戳转换为 Date 对象
+    const date = new Date(timeUnix);
+    const adjustedDate = new Date(date.getTime() + (timezone * 1000));
+    let hours = adjustedDate.getHours();
     const period = hours >= 12 ? "PM" : "AM";
-
-    return `${hours = hours % 12 || 12} ${period}`;
+    hours = hours % 12 || 12;
+    return `${hours} ${period}`;
 }
-
 /**
  * 
  * @param {number} mps Meter per second 

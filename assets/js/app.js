@@ -377,7 +377,9 @@ export const updateWeather = (lat, lon) => {
                     <p class="title-2">${parseInt(temp_max)}&deg;</p>
                   </span>
                 </div>
-                <p class="label-1">${module.monthNames[date.getMonth()]} / ${date.getDate()}</p>
+                <p class="label-1">${
+                  module.monthNames[date.getMonth()]
+                } / ${date.getDate()}</p>
                 <p class="label-1">${module.weekDayNames[date.getDay()]}</p>
                 `;
         forecastSection.querySelector("[data-forecast-list]").appendChild(li);

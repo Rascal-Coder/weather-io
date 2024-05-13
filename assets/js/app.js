@@ -1,9 +1,3 @@
-/**
- * @license MIT
- * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
- */
-
 "use strict";
 
 import { fetchData, url } from "./api.js";
@@ -50,7 +44,6 @@ searchField.addEventListener("input", (e) => {
   if (searchField.value.trim()) {
     searchTimeout = setTimeout(() => {
       fetchData(url.geo(searchField.value), function (locations) {
-        console.log("🚀 ~ locations:", locations);
         searchField.classList.remove("searching");
         searchResult.classList.add("active");
         searchResult.innerHTML = `
@@ -85,24 +78,6 @@ searchField.addEventListener("input", (e) => {
             searchResult.classList.remove("active");
           });
         });
-        // for (const { lat, lon, name, state, country } of locations) {
-        //     const searchItem = document.createElement("li");
-        //     searchItem.classList.add("view-item");
-        //     searchItem.innerHTML = `
-        //     <span class="m-icon">location_on</span>
-        //     <div>
-        //         <p class="item-title">${name}</p>
-        //         <p class="label-2 item-subtitle">${state || ""} ${country}</p>
-        //     </div>
-        //     <a href="#/weather?lat=${lat}&lon=${lon}" aria-label="${name} weather" class="item-link has-state" data-search-toggler></a>
-        //     `
-        //     searchResult.querySelector("[data-search-list]").appendChild(searchItem);
-        //     items.push(searchItem.querySelector("[data-search-toggler]"));
-        //     addEvernOnElements(items, "click", function () {
-        //         toggleSearch();
-        //         searchResult.classList.remove("active");
-        //     });
-        // }
       });
     }, searchTimeoutDuration);
   }
@@ -180,7 +155,9 @@ export const updateWeather = (lat, lon) => {
     fetchData(
       url.reverseGeo(lat.split("=")[1], lon.split("=")[1]),
       function (result) {
-        const { regeocode: {addressComponent} } = result;
+        const {
+          regeocode: { addressComponent },
+        } = result;
         const { province, city } = addressComponent;
         card.querySelector(
           "[data-location]"
@@ -400,9 +377,7 @@ export const updateWeather = (lat, lon) => {
                     <p class="title-2">${parseInt(temp_max)}&deg;</p>
                   </span>
                 </div>
-                <p class="label-1">${date.getDate()} ${
-          module.monthNames[date.getMonth()]
-        }</p>
+                <p class="label-1">${module.monthNames[date.getMonth()]} / ${date.getDate()}</p>
                 <p class="label-1">${module.weekDayNames[date.getDay()]}</p>
                 `;
         forecastSection.querySelector("[data-forecast-list]").appendChild(li);

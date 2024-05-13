@@ -7,29 +7,66 @@
 
 'use strict';
 
+// export const weekDayNames = [
+//     "Sunday",
+//     "Monday",
+//     "Tuesday",
+//     "Wednesday",
+//     "Thursday",
+//     "Friday",
+//     "Saturday"
+// ];
 export const weekDayNames = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
+    "星期天",
+    "星期一",
+    "星期二",
+    "星期三",
+    "星期四",
+    "星期五",
+    "星期六"
 ];
 
+// export const monthNames = [
+//     "Jan",
+//     "Feb",
+//     "Mar",
+//     "Apr",
+//     "May",
+//     "Jun",
+//     "Jul",
+//     "Aug",
+//     "Sep",
+//     "Oct",
+//     "Nov",
+//     "Dec"
+// ];
+// export const monthNames = [
+//     "一月",
+//     "二月",
+//     "三月",
+//     "四月",
+//     "五月",
+//     "六月",
+//     "七月",
+//     "八月",
+//     "九月",
+//     "十月",
+//     "十一月",
+//     "十二月"
+// ];
 export const monthNames = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec"
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12"
 ];
 
 /**
@@ -43,7 +80,7 @@ export const getDate = function (dateUnix, timezone) {
     const weekDayName = weekDayNames[date.getUTCDay()];
     const monthName = monthNames[date.getUTCMonth()];
 
-    return `${weekDayName} ${date.getUTCDate()}, ${monthName}`;
+    return `${weekDayName} ${monthName} / ${date.getUTCDate()}`;
 }
 /**
  * 

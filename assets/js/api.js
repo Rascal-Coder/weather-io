@@ -1,10 +1,3 @@
-/**
- * @license MIT
- * @fileoverview All api related stuff like api_key, api request etc.
- * @copyright codewithsadee 2023 All rights reserved
- * @author codewithsadee <mohammadsadee24@gmail.com>
- */
-
 'use strict'
 const api_key = '612fe0c2c22681284f5bdf0b1f77bd17'
 const BAIDU_KEY = '26711937b3cbee60212cdf3af91b0ed8'
